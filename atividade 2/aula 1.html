@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arqui de computadores</title>
+    <style>
+        h1{
+        text-align: center;
+        }
+        h2{
+        text-align: center;
+        }
+        p{
+        font-size: 25px;
+        text-align: center;
+        }
+        img{
+        margin: 2%;
+        
+        }
+        .and{
+        position: relative; 
+  right: 70px;
+  width: 650px;        
+        }
+        .nand{
+            position: relative;
+            right: 120px;
+            width: 470px;
+        }
+        .ima{
+        text-align: center;
+        }
+        ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+
+  display: flex;              /* deixa lado a lado */
+  justify-content: center;    /* centraliza no meio */
+  align-items: center;        /* centraliza verticalmente */
+}
+
+ul li {
+  margin: 0;   /* remove qualquer espaço estranho */
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+    </style>
+</head>
+<body>
+    <ul>
+  <li><a href="#basenum">Base numerica</a></li>
+  <li><a href="#portas">Portas logicas</a></li>
+  <li><a href="#circuitos">Circuitos logicos</a></li>
+  <li><a href="#flipflop">flip Flop</a></li>
+  <li><a href="#exercicios">exercicios</a></li>
+</ul>
+    <h1>Aulas sobre Fundamentos e arquitetura de computadores</h1>
+    <h2 id="basenum">Base numerica</h2>
+    <p>para o computador, tudo sao numeros, mais especificamente em binario(0 ou 1) sendo 1 ligado e 0 desligado<br>a comunicação entre usuario e maquina é feita atraves de codificaçao e decodificaçao dos bytes. 1 byte = 8 bits = 1 caracter</p>
+
+    <h2 id="portas">portas logicas</h2>
+    <p>existem 8 portas logicas: buffer, not, and, nand, or, nor, xor, xnor. onde cada uma delas tem sua propia tabela verdade, onde mostra todas as possiveis situaçoes de entrada e saidas do circuito logico</p>
+    <div class="ima">
+    <div>
+    <img class="buffer" src="https://imgs.search.brave.com/ojewQjOMamygYqIKemYIKnWw2n9Av1L5CYslzKRqqmg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Z3NuZXR3b3JrLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8wMS9idWZmZXIt/dHJ1dGgtdGFibGUu/anBn"/>
+    <img class="not" src="https://imgs.search.brave.com/I-T_5w0zDB0r3msOoqsoIwiD8dAqdnntRqW8-WyD-oc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA2/MTEvMTY0NC85MDE4/L2ZpbGVzL05PVF9M/b2dpY19HYXRlX3N5/bWJvbF93aXRoX3Ry/dXRoX3RhYmxlXzQ4/MHg0ODAuanBnP3Y9/MTY4MTkzMDgzMw"/>
+    </div>
+    <div>
+    <img class="and" src="https://imgs.search.brave.com/aUUQ0tjKfToP_r_oZ55vmEE_S4pQt3Ds9thod6KspN0/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA2/MTEvMTY0NC85MDE4/L2ZpbGVzL0FORF9M/b2dpY19HYXRlX3N5/bWJvbF93aXRoX3Ry/dXRoX3RhYmxlXzYw/MHg2MDAucG5nP3Y9/MTY4MTI0Mjk2Mw"/>
+    <img class="nand" src="https://imgs.search.brave.com/GTxFt0-RazhOIbKXx2TtCnjEDGIgIKLD085ues-alM0/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9wZm5p/Y2hvbGxzLmNvbS9F/bGVjdHJvbmljc19S/ZXNvdXJjZXMvSW1h/Z2VzL0xvZ2ljX05B/TkRfVFRfU3ltYm9s/LnBuZw"/>
+    </div>
+    <div>
+    <img class="or" src="https://imgs.search.brave.com/UhRcUlzjznrM9K6jSCRHoikL8RdHi9dVf--stA4J-gs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA2/MTEvMTY0NC85MDE4/L2ZpbGVzL09SX0xv/Z2ljX0dhdGVfc3lt/Ym9sX3dpdGhfdHJ1/dGhfdGFibGVfNDgw/eDQ4MC5qcGc_dj0x/NjgxOTMwOTQ4"/>
+    <img class="nor" src="https://imgs.search.brave.com/BGFpCF1ir4H0ATA6Vdtc5qhlq4GJIMRPdlanzyEOXRU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Z3NuZXR3b3JrLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8wMS9ub3ItZ2F0/ZS10cnV0aC10YWJs/ZS5qcGc"/>
+    </div>
+    <div>
+    <img class="xor" src="https://imgs.search.brave.com/sONVIQOKGJcelM5YO_oz-S9cTqCxNwNP_ez414amOV0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA2/MTEvMTY0NC85MDE4/L2ZpbGVzL1hPUl9M/b2dpY19HYXRlX3N5/bWJvbF93aXRoX3Ry/dXRoX3RhYmxlXzQ4/MHg0ODAuanBnP3Y9/MTY4MTkzMTIwOQ"/>
+    <img class="xnor" src="https://imgs.search.brave.com/56Z-Tz3exI4wFIS2SrOJB0OnSJ38Fu4GEgGaJhbXe8E/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Z3NuZXR3b3JrLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8wMS94bm9yLWdh/dGUtdHJ1dGgtdGFi/bGUuanBn"/>
+    </div>
+    <h2 id="circuitos">Circuitos logicos</h2>
+    <p>juncao das portas logicas para executar expressoes mostrando todas as possibilidades de saida</p>
+    <img src="https://imgs.search.brave.com/llBECUD-pVuskRknSI-0ZA3uKrnT3Hc74NM22cGjIQc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jcmVh/dGVseS5jb20vc3Rh/dGljL2Fzc2V0cy9n/dWlkZXMvbG9naWMt/Z2F0ZS1kaWFncmFt/L2xvZ2ljLWdhdGUt/ZGlhZ3JhbS1jb21w/b25lbnRzLndlYnA"/>
+    <img src="https://imgs.search.brave.com/Jtu29ypXihjvCxCRmcXXleOGpv10UCjsTJRpC5lesgM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbGVh/cm5lbmdpbmVlcmlu/Zy5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjQvMDUvSFR5/WjBYVUhyLV9EYkk4/cDdMNnR6OFd2aVM3/NC00ZWFWSkVMUlZT/ZEZ3YlhyWjJtYzdx/VUpoU29raFBjZDdK/UDlSY19ZQkhCTkE3/OHhHdkJDR0xTdm1H/VTIxN0RWTzc2Tko5/OWI3UEJ5c3VmclNz/UkdVY2FqaVVWTzZU/b2NISkFXcW5XSmhT/MUV6Y184R1kxUkhP/RW9Xcy5wbmc"/>
+   </div>
+    <h2 id="flipflop">Flip Flop jk</h2>
+    <p>aplicações de Flip Flop sao o armazenamento de memoria, transferencia de dados e contadores</p>
+    <div class="ima">   
+    <img src="https://imgs.search.brave.com/q_KeF60Plkl53BLQ1Y9a-IoTcjSlFldXLIx5RxuBaSU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNDA5MTIx/MTQwNTUvSkstRmxp/cC1GbG9wLnBuZw"/>
+    </div>
+
+    <h2 id="exercicios">Exercícios</h2>
+
+<form>
+
+<h3>1) Quantos bits possui 1 byte?</h3>
+<input type="radio" name="q1"> 4 bits<br>
+<input type="radio" name="q1"> 8 bits<br>
+<input type="radio" name="q1"> 16 bits<br>
+<input type="radio" name="q1"> 32 bits<br><br>
+
+<h3>2) Qual base numérica o computador utiliza internamente?</h3>
+<input type="radio" name="q2"> Decimal<br>
+<input type="radio" name="q2"> Binária<br>
+<input type="radio" name="q2"> Hexadecimal<br>
+<input type="radio" name="q2"> Octal<br><br>
+
+<h3>3) Qual porta lógica inverte o valor da entrada?</h3>
+<input type="radio" name="q3"> AND<br>
+<input type="radio" name="q3"> OR<br>
+<input type="radio" name="q3"> NOT<br>
+<input type="radio" name="q3"> XOR<br><br>
+
+<h3>4) A porta AND só retorna 1 quando:</h3>
+<input type="radio" name="q4"> Pelo menos uma entrada é 1<br>
+<input type="radio" name="q4"> Todas as entradas são 1<br>
+<input type="radio" name="q4"> Todas as entradas são 0<br>
+<input type="radio" name="q4"> As entradas são diferentes<br><br>
+
+<h3>5) O Flip Flop JK é utilizado principalmente para:</h3>
+<input type="radio" name="q5"> Converter números decimais<br>
+<input type="radio" name="q5"> Armazenamento de memória<br>
+<input type="radio" name="q5"> Criar imagens<br>
+<input type="radio" name="q5"> Transmitir internet<br><br>
+
+<input type="submit" value="Enviar respostas">
+
+</form>
+</body>
+</html>
