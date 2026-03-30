@@ -29,11 +29,11 @@ function controlador (){
 
             console.log("tempo:",contador);
             
-            if (contador == 5){
+            if (contador == 30){
                 cria.src = estados.puto;
             }
 
-            if(contador == 10){
+            if(contador == 60){
                 cria.src = estados.morto;
                 dead++;
             }
