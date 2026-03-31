@@ -2,7 +2,7 @@ const cria = document.getElementById("mainImage");
 const btn = document.getElementById("btnImage");
 const fundoDia = "sabri_bg.png";
 const fundoNoite = "sabri_night.png";
-
+const musica = new Audio('sabri_manchild.mp3');
 
 const estados = {
     normal:  "sabri_neutral.png",
@@ -116,7 +116,20 @@ horas=0;
     }
 }
 
+function carntar(){
+    cria.src = estados.ferlini;
+if (musica.paused){
+    musica.play().catch(error =>{
+        console.log("navegador bloqueou");
+    });
+    musica.pause();
+    musica.currentTime = 0;
+}
 
+
+
+
+}
 
 function ferlini() {
     cria.src = estados.ferlini;
