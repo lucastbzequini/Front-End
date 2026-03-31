@@ -11,7 +11,8 @@ const estados = {
     comendo: "sabri_eat.png",
     alimentado: "sabri_full.png",
     dormir: "sabri_sleep.png",
-    ferlini: "ferlini.jpg"
+    ferlini: "ferlini.jpg",
+    sing: "sabri_singing.png",
 }
 
 let contador = 0; 
@@ -117,7 +118,7 @@ horas=0;
 }
 
 function cantar(){
-    cria.src = estados.ferlini;
+    cria.src = estados.sing;
 if (musica.paused){
     musica.play().catch(error =>{
         console.log("navegador bloqueou");
