@@ -117,14 +117,28 @@ horas=0;
     }
 }
 
-function cantar(){
+function cantar() {
+    if (dead > 0) return; // Se estiver morta, não canta
+
+    // 1. Muda a imagem para cantando
     cria.src = estados.sing;
-if (musica.paused){
-    musica.play().catch(error =>{
-        console.log("navegador bloqueou");
+
+    // 2. Toca a música
+    musica.play().then(() => {
+        console.log("A diva está cantando!");
+    }).catch(error => {
+        console.log("O navegador bloqueou o áudio. Clique na página antes!", error);
     });
-    musica.pause();
-    musica.currentTime = 0;
+
+    // 3. Evento para quando a música ACABAR
+    musica.onended = function() {
+        if (dead == 0) {
+            cria.src = estados.normal; // Volta ao normal se estiver viva
+            contador = 0; // Reseta a fome porque ela se divertiu
+        } else {
+            cria.src = estados.morto;
+        }
+    };
 }
 
 
