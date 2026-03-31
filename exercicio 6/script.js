@@ -116,7 +116,7 @@ horas=0;
     }
 }
 
-function carntar(){
+function cantar(){
     cria.src = estados.ferlini;
 if (musica.paused){
     musica.play().catch(error =>{
