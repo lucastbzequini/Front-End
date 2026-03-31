@@ -118,32 +118,27 @@ horas=0;
 }
 
 function cantar() {
-    if (dead > 0) return; // Se estiver morta, não canta
+    if (dead > 0) {
+        console.log("Ela não pode cantar se estiver morta.");
+        return;
+    }
 
-    // 1. Muda a imagem para cantando
     cria.src = estados.sing;
 
-    // 2. Toca a música
     musica.play().then(() => {
-        console.log("A diva está cantando!");
-    }).catch(error => {
-        console.log("O navegador bloqueou o áudio. Clique na página antes!", error);
+        console.log("Tocando música...");
+    }).catch(err => {
+        console.warn("Clique na tela primeiro para o áudio funcionar.");
     });
 
-    // 3. Evento para quando a música ACABAR
+    // Quando a música acabar, ela volta ao normal
     musica.onended = function() {
-        if (dead == 0) {
-            cria.src = estados.normal; // Volta ao normal se estiver viva
-            contador = 0; // Reseta a fome porque ela se divertiu
+        if (dead === 0) {
+            cria.src = estados.normal;
         } else {
             cria.src = estados.morto;
         }
     };
-}
-
-
-
-
 }
 
 function ferlini() {
