@@ -3,8 +3,10 @@ const btn = document.getElementById("btnImage");
 const fundoDia = "sabri_bg.png";
 const fundoNoite = "sabri_night.png";
 const musica = new Audio('sabri_manchild.mp3');
+const musica2 = new Audio('sabri_expresso.mp3');
 
 musica.volume = 0.2;
+musica2.volume = 0.2;
 
 const estados = {
     normal:  "sabri_neutral.png",
@@ -119,22 +121,32 @@ horas=0;
     }
 }
 
+
+
 function cantar() {
     if (dead > 0) {
         console.log("Ela não pode cantar se estiver morta.");
         return;
     }
 
+    const musicaSorteada = Math.random() < 0.5 ? musica : musica2;
+
+
+    musica.pause();
+    musica.currentTime = 0;
+    musica2.pause();
+    musica2.currentTime = 0;
+
     cria.src = estados.sing;
 
-    musica.play().then(() => {
-        console.log("Tocando música...");
+    musicaSorteada.play().then(() => {
+        console.log("Tocando música selecionada...");
     }).catch(err => {
         console.warn("Clique na tela primeiro para o áudio funcionar.");
     });
 
-    // Quando a música acabar, ela volta ao normal
-    musica.onended = function() {
+
+    musicaSorteada.onended = function() {
         if (dead === 0) {
             cria.src = estados.normal;
         } else {
@@ -142,6 +154,7 @@ function cantar() {
         }
     };
 }
+
 
 function ferlini() {
     cria.src = estados.ferlini;
