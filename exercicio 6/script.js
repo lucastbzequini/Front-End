@@ -4,6 +4,8 @@ const fundoDia = "sabri_bg.png";
 const fundoNoite = "sabri_night.png";
 const musica = new Audio('sabri_manchild.mp3');
 
+musica.volume = 0.2;
+
 const estados = {
     normal:  "sabri_neutral.png",
     puto: "sabri_cry.png",
@@ -124,7 +126,7 @@ function cantar() {
     }
 
     cria.src = estados.sing;
-    musica.volume = 0.2;
+
     musica.play().then(() => {
         console.log("Tocando música...");
     }).catch(err => {
