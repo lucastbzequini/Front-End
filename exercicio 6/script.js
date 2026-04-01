@@ -124,7 +124,7 @@ function cantar() {
     }
 
     cria.src = estados.sing;
-    audio.volume = 0.5;
+    musica.volume = 0.2;
     musica.play().then(() => {
         console.log("Tocando música...");
     }).catch(err => {
