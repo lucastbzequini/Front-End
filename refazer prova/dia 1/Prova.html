@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Copa do Mundo 2026</title>
+
+    <style>
+       body {
+    background-color: #0f172a;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #1e293b;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #38bdf8;
+}
+
+nav a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 12px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.secao {
+    background-color: #f8fafc;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.secao h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.secao p {
+    font-size: 16px;
+    color: #334155;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.secao a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.secao a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 25px;
+}
+    </style>
+</head>
+
+<body id="topo">
+
+    <!-- Navegação -->
+    <nav>
+        <a href="#organizacao">Organização e Sedes</a>
+        <a href="#formato">Novo Formato</a>
+        <a href="#impacto">Impacto</a>
+    </nav>
+
+    <!-- Seção 1 -->
+    <section id="organizacao" class="secao">
+        <h2>🌍 Organização e Sedes</h2>
+        <p>
+            A Copa do Mundo FIFA de 2026 será a primeira edição realizada em três países:
+            Estados Unidos, Canadá e México. Essa será também a maior Copa da história em número
+            de cidades-sede, com partidas distribuídas por diversas regiões da América do Norte.
+        </p>
+        <a href="#topo">Voltar ao topo</a>
+    </section>
+
+    <!-- Seção 2 -->
+    <section id="formato" class="secao">
+        <h2>⚽ Novo Formato</h2>
+        <p>
+            O torneio contará com 48 seleções, aumentando o número de jogos e tornando a competição
+            mais inclusiva e global, promovida pela FIFA.
+        </p>
+        <a href="#topo">Voltar ao topo</a>
+    </section>
+
+    <!-- Seção 3 -->
+    <section id="impacto" class="secao">
+        <h2>🏆 Impacto</h2>
+        <p>
+            A edição de 2026 terá grande impacto econômico e cultural, sendo uma das Copas mais assistidas
+            da história e fortalecendo o futebol mundial.
+        </p>
+        <a href="#topo">Voltar ao topo</a>
+    </section>
+<button onclick="mostrarTabela()">Mostrar Tabela de Jogos</button>
+<script>
+    function mostrarTabela() {
+
+    if (!document.getElementById("tabelaJogos")) {
+
+        const img = document.createElement("img");
+        img.src = "img/Tabela_Jogos.png";
+        img.id = "tabelaJogos";
+        img.alt = "Tabela de Jogos";
+
+        img.style.display = "block";
+        img.style.margin = "20px auto";
+        img.style.maxWidth = "90%";
+        img.style.borderRadius = "10px";
+
+        document.body.appendChild(img);
+    }
+};
+</script>
+</body>
+</html>
