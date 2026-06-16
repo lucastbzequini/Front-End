@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Netto IA - Tecnologia para Todos</title>
+<titulo>Netto IA - Tecnologia para Todos</titulo>
 
 
 
@@ -15,15 +15,8 @@
     font-family:system-ui,sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    background:#fffdf7;
-    background-image:
-    radial-gradient(circle at 10% 20%, rgba(255,193,7,.10) 0%, transparent 30%),
-    radial-gradient(circle at 90% 80%, rgba(255,193,7,.10) 0%, transparent 30%);
+    background:#FFD54F;
     color:#1A1A1A;
     overflow-x:hidden;
 }
@@ -74,7 +67,7 @@ nav a:hover{
     color:#FFB300;
 }
 
-.hero{
+.capa{
     min-height:100vh;
     display:flex;
     align-items:center;
@@ -84,7 +77,7 @@ nav a:hover{
     radial-gradient(circle at bottom right,#FFC107 0%,transparent 35%);
 }
 
-.hero-container{
+.capa-container{
     max-width:1200px;
     margin:auto;
     width:100%;
@@ -94,7 +87,7 @@ nav a:hover{
     align-items:center;
 }
 
-.badge{
+.info{
     display:inline-block;
     background:rgba(255,193,7,.15);
     color:#b77900;
@@ -105,26 +98,26 @@ nav a:hover{
     margin-bottom:25px;
 }
 
-.hero h1{
+.capa h1{
     font-size:4.5rem;
     line-height:1.05;
     margin-bottom:25px;
     font-weight:800;
 }
 
-.hero h1 span{
+.capa h1 span{
     background:linear-gradient(135deg,#FFC107,#FFB300);
 
 }
 
-.hero p{
-    color:#6B7280;
+.capa p{
+    color:#000000;
     font-size:1.15rem;
     line-height:1.9;
     margin-bottom:35px;
 }
 
-.buttons{
+.botao{
     display:flex;
     gap:15px;
     flex-wrap:wrap;
@@ -138,33 +131,33 @@ nav a:hover{
     transition:.3s;
 }
 
-.btn-primary{
+.btn-pri{
     background:linear-gradient(135deg,#FFC107,#FFB300);
     color:#000;
     box-shadow:0 15px 40px rgba(255,193,7,.35);
 }
 
-.btn-primary:hover{
+.btn-pri:hover{
     transform:translateY(-4px);
 }
 
-.btn-secondary{
+.btn-sec{
     border:2px solid #FFC107;
     color:#b77900;
 }
 
-.btn-secondary:hover{
+.btn-sec:hover{
     background:#FFC107;
     color:#000;
 }
 
 
-.phone-area{
+.telefone-area{
     display:flex;
     justify-content:center;
 }
 
-.phone{
+.telefone{
     width:330px;
     height:680px;
     background:white;
@@ -173,7 +166,7 @@ nav a:hover{
     box-shadow:0 30px 70px rgba(0,0,0,.15);
 }
 
-.screen{
+.tela{
     width:100%;
     height:100%;
     border-radius:32px;
@@ -182,7 +175,7 @@ nav a:hover{
     position:relative;
 }
 
-.screen::before{
+.tela::before{
     content:"NettoAI";
     position:absolute;
     top:40px;
@@ -204,7 +197,7 @@ nav a:hover{
     animation:pulse 2s infinite;
 }
 
-.overlay-text{
+.texto {
     position:absolute;
     bottom:130px;
     left:50%;
@@ -236,29 +229,29 @@ nav a:hover{
     margin:auto;
 }
 
-.title{
+.titulo{
     text-align:center;
     margin-bottom:70px;
 }
 
-.title h2{
+.titulo h2{
     font-size:3rem;
     margin-bottom:15px;
 }
 
-.title p{
+.titulo p{
     color:#6B7280;
     max-width:700px;
     margin:auto;
 }
 
-.cards{
+.imagems{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
-.card{
+.imagem{
     background:white;
     border-radius:24px;
     padding:35px;
@@ -266,7 +259,7 @@ nav a:hover{
     transition:.3s;
 }
 
-.card:hover{
+.imagem:hover{
     transform:translateY(-8px);
 }
 
@@ -280,7 +273,7 @@ width:50px;
     height:50px;
 }
 
-.icon{
+.icone{
     width:70px;
     height:70px;
     border-radius:18px;
@@ -292,11 +285,11 @@ width:50px;
     background:linear-gradient(135deg,#FFC107,#FFB300);
 }
 
-.card h3{
+.imagem h3{
     margin-bottom:15px;
 }
 
-.card p{
+.imagem p{
     color:#6B7280;
     line-height:1.7;
 }
@@ -339,20 +332,20 @@ footer{
 
 @media(max-width:900px){
 
-.hero-container{
+.capa-container{
     grid-template-columns:1fr;
     text-align:center;
 }
 
-.hero h1{
+.capa h1{
     font-size:3rem;
 }
 
-.buttons{
+.botao{
     justify-content:center;
 }
 
-.phone{
+.telefone{
     width:280px;
     height:580px;
 }
@@ -377,11 +370,11 @@ nav ul{
 </nav>
 </header>
 
-<section class="hero" id="sobre">
-<div class="hero-container">
+<section class="capa" id="sobre">
+<div class="capa-container">
 
 <div>
-<div class="badge"> Inclusão Digital com Inteligência Artificial</div>
+<div class="info"> Inclusão Digital com Inteligência Artificial</div>
 
 <h1>
 Tecnologia feita para todos.
@@ -391,18 +384,18 @@ Tecnologia feita para todos.
 O Netto IA guia idosos e pessoas com pouca experiência digital através de tutoriais interativos diretamente na tela do celular. Nossa inteligência artificial mostra exatamente onde tocar e explica cada passo de forma simples e acessível.
 </p>
 
-<div class="buttons">
-<a href="#" class="btn btn-primary">Baixar Aplicativo</a>
-<a href="#" class="btn btn-secondary">Conhecer Projeto</a>
+<div class="botao">
+<a href="#" class="btn btn-pri">Baixar Aplicativo</a>
+<a href="#" class="btn btn-sec">Conhecer Projeto</a>
 </div>
 </div>
 
-<div class="phone-area">
-<div class="phone">
-<div class="screen" onclick="tutorial()">
+<div class="telefone-area">
+<div class="telefone">
+<div class="tela" onclick="tutorial()">
     <div class="overlay-circle"></div>
 
-    <div class="overlay-text">
+    <div class="texto ">
         Toque aqui para continuar o tutorial
     </div>
 
@@ -420,33 +413,33 @@ O Netto IA guia idosos e pessoas com pouca experiência digital através de tuto
 
 <div class="container">
 
-<div class="title">
+<div class="titulo">
 <h2>Como o Netto IA ajuda?</h2>
 <p>
 Transformamos tarefas complexas em orientações simples, visuais e fáceis de seguir.
 </p>
 </div>
 
-<div class="cards">
+<div class="imagems">
 
-<div class="card">
-<div class="icon"><img src="https://cdn-icons-png.flaticon.com/256/367/367070.png"></div>
+<div class="imagem">
+<div class="icone"><img src="https://cdn-icones-png.flaticone.com/256/367/367070.png"></div>
 <h3>Orientação Visual</h3>
 <p>
 Destaques interativos mostram exatamente onde clicar em qualquer aplicativo.
 </p>
 </div>
 
-<div class="card">
-<div class="icon"><img class="tiço" src="https://png.pngtree.com/png-clipart/20240720/original/pngtree-small-black-robot-png-image_15596506.png"></div>
+<div class="imagem">
+<div class="icone"><img class="tiço" src="https://png.pngtree.com/png-clipart/20240720/original/pngtree-small-black-robot-png-image_15596506.png"></div>
 <h3>Explicação Inteligente</h3>
 <p>
 A IA explica cada ação utilizando uma linguagem clara e acessível.
 </p>
 </div>
 
-<div class="card">
-<div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/25/25424.png"></div>
+<div class="imagem">
+<div class="icone"><img src="https://cdn-icones-png.flaticone.com/512/25/25424.png"></div>
 <h3>Inclusão Digital</h3>
 <p>
 Mais autonomia para idosos e pessoas que enfrentam dificuldades com tecnologia.
@@ -475,7 +468,7 @@ Capacitamos pessoas a utilizarem celulares, aplicativos bancários, mensagens, r
 
 <script>
 function tutorial() {
-    document.querySelector(".overlay-text").style.display = "none";
+    document.querySelector(".texto ").style.display = "none";
     document.querySelector(".overlay-circle").style.display = "none";
     document.getElementById("tutorial-img").style.display = "block";
 }
